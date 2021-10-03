@@ -58,13 +58,19 @@ export default class App extends Component {
   render() {
     const {breaklength, sessionlength} = this.state
     return (
-      <section className="section-container ">
-        <h2 className="titel">25 + 5 Clock</h2>
-      <section className="section-length">
-        <BreakLength  breaklength={breaklength} Upbreak={this.Upbreak} Downbreak={this.Downbreak}/>
-        <SessionLength sessionlength={sessionlength} Upsession={this.Upsession} Downsession={this.Downsession}/>
-      </section>
-      </section>
+      <main>
+        <section className="section-container ">
+          <header>
+            <h2 className="titel">25 + 5 Clock</h2>
+          </header>
+          <article className="article-length">
+            <BreakLength  breaklength={breaklength} Upbreak={this.Upbreak} Downbreak={this.Downbreak}/>
+            <SessionLength sessionlength={sessionlength} Upsession={this.Upsession} Downsession={this.Downsession}/>
+          </article>
+        </section>
+        
+     </main>
+
     )
   }
 }

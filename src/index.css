@@ -36,7 +36,7 @@ code {
 
 }
 
-.section-length{
+.article-length{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,11 +44,12 @@ code {
   width: 100%;
   
 }
-.break-length{
+.break-session-length{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 .titel-length-container{
   font-size: 2rem;
@@ -59,12 +60,6 @@ code {
   font-weight: 400;
   padding: 0 20px;
 
-}
-.session-length{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -117,7 +112,5 @@ button:hover{
     width: 20px;
     height: 20px;
   }
-  .ibtn:hover{
 
-  }
 }
