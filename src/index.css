@@ -11,16 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
-.section-container{
-  background-image: linear-gradient(to bottom,to  #CE93D8 , #E1BEE7, #F3E5F5);
-  width: 100%;
+.main{
+  background-image: linear-gradient(to bottom, #7E57C2 , #5E35B1, #512DA8);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  height: 100vh;
+  color: white;
+  
+}
+
+.section-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
 }
 .titel{
   font-size: 4rem;
@@ -32,18 +40,8 @@ code {
   justify-content: center;
   align-items: center;
   width: 49%;
-  margin-top: 3rem;
-
 }
 
-.article-length{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  
-}
 .break-session-length{
   display: flex;
   flex-direction: row;
@@ -64,7 +62,7 @@ code {
 
 
 button{
-  background-color:  #07185c;
+  background-color:  #B388FF;
   justify-content: center;
   color: white;
   margin: 0 10px;
@@ -81,27 +79,79 @@ button{
 }
 
 button:hover{
-  background-color: #607d8b;
+  background-color: #b488ff87;
 }
-.downclicable:active{
+button:active{
   transform: scale(0.9) ;
 }
-.upclicable:active{
-  transform: scale(0.9) ;
+
+.section-timer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 
 }
+.article-timer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: .5rem;
+
+}
+.titel-timer{
+  font-size: 3rem;
+  font-weight: 400;
+}
+.value-timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.value-timer span{
+  margin-top: 0.5rem ;
+  font-size: 2rem;
+  padding: 3px;
+}
+.btn-timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+}
+
+button.btn-play,button.btn-stop,button.btn-repeat{
+  margin-right: 1rem;
+}
+
+
 @media (max-width: 600px) { 
 
   .titel{
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .titel-length-container{
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+  .titel-timer{
+    font-size: 1.5rem;
   }
   .span-val{
-    font-size: 1rem;
+    font-size: 1.5rem;
 
-  }button{
+  }
+  .value-timer span{
+    margin-top: 0 ;
+    font-size: 1.5rem;
+    padding: 1px;
+  }
+  button{
 
     height: 30px;
     width: 30px;
@@ -114,3 +164,4 @@ button:hover{
   }
 
 }
+
