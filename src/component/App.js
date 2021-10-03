@@ -58,7 +58,7 @@ export default class App extends Component {
   render() {
     const {breaklength, sessionlength} = this.state
     return (
-      <section className="section-container">
+      <section className="section-container ">
         <h2 className="titel">25 + 5 Clock</h2>
       <section className="section-length">
         <BreakLength  breaklength={breaklength} Upbreak={this.Upbreak} Downbreak={this.Downbreak}/>
