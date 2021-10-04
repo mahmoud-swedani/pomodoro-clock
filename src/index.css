@@ -1,167 +1,124 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+ body {
+    background: #501e5c;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: Roboto, Times, serif;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.main{
-  background-image: linear-gradient(to bottom, #7E57C2 , #5E35B1, #512DA8);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-  
-}
+  }
 
-.section-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 2rem 0;
-}
-.titel{
-  font-size: 4rem;
-  font-weight: 400;
-}
-.length-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 49%;
-}
+#container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 
-.break-session-length{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-.titel-length-container{
-  font-size: 2rem;
-  font-weight: 400;
-}
-.span-val{
-  font-size: 2rem;
-  font-weight: 400;
-  padding: 0 20px;
+.main-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
 
-}
+.length-control {
+    width: 250px;
+  }
 
+button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
 
-button{
-  background-color:  #B388FF;
-  justify-content: center;
-  color: white;
-  margin: 0 10px;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-level,
+.length-control {
+    display: inline-block;
+
+  }
+
+.btn-level{
+  font-family: digital;
 
 }
-
-button:hover{
-  background-color: #b488ff87;
+.ibtnt{
+  margin: 10px;
 }
-button:active{
-  transform: scale(0.9) ;
+.btn-level .btn-level:nth-child(3),
+.length-control .btn-level:nth-child(3) {
+    width: 40px;
+  }
+
+.timer {
+    border: 7px solid #2d133a;
+    margin: 20px auto 10px auto;
+    width: 270px;
+    height: 160px;
+    border-radius: 50px;
+    position: relative;
+  }
+
+.timer-wrapper {
+    position: absolute;
+    width: 190px;
+    height: 110px;
+    left: 50%;
+    top: 50%;
+    margin-left: -95px;
+    margin-top: -57px;
+  }
+
+#time-left {
+  font-family: digital;
+  font-size: 80px;
 }
 
-.section-timer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-
+button:active {
+  transform: scale(1);
 }
-.article-timer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  border-radius: 15px;
-  padding: .5rem;
 
+@media screen and (max-width: 500px) {
+  #container {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
 }
-.titel-timer{
-  font-size: 3rem;
-  font-weight: 400;
-}
-.value-timer{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+.author {
   text-align: center;
-}
-.value-timer span{
-  margin-top: 0.5rem ;
-  font-size: 2rem;
-  padding: 3px;
-}
-.btn-timer{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  margin: 1rem;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ebebeb;
 }
 
-button.btn-play,button.btn-stop,button.btn-repeat{
-  margin-right: 1rem;
+.author p {
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 26px;
 }
-
-
-@media (max-width: 600px) { 
-
-  .titel{
-    font-size: 2.5rem;
-  }
-  .titel-length-container{
-    font-size: 1.5rem;
-  }
-  .titel-timer{
-    font-size: 1.5rem;
-  }
-  .span-val{
-    font-size: 1.5rem;
-
-  }
-  .value-timer span{
-    margin-top: 0 ;
-    font-size: 1.5rem;
-    padding: 1px;
-  }
-  button{
-
-    height: 30px;
-    width: 30px;
-
-
-  }
-  .ibtn{
-    width: 20px;
-    height: 20px;
-  }
-
-}
-
+/*# sourceMappingURL=app.css.map */
